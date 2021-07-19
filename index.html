@@ -85,7 +85,6 @@
             </div>
             <div class="modal-body">
                 <form class="col-12 align-items-center">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
                        <div class="card-body">
                            <dl class="row">
                                <dd class="col-12 col-sm-2">Number of Guests</dd>
@@ -99,6 +98,19 @@
                                </dd>
                            </dl>
                            <dl class="row">
+                            <dd class="col-12 col-sm-2">Section</dd>
+                            <dd class=" col-12 col-sm-10 ">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked > Non-smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                    </label>
+                                </div>
+                            </dd>
+                           </dl>
+                           <dl class="row">
                                <dd class="col-12 col-sm-2 ">Date and Time</dd>
                                <dd class="col-12 col-sm-10 ">
                                    <span class="col-12 col-sm-6 px-0"><input class="rounded-lg px-0 border p-2" type="text" placeholder="Date"> </span>
@@ -106,6 +118,7 @@
                                </dd>
                            </dl>
                            <div class="offset-sm-2 px-1">
+                               <button type="button" class="btn btn-secondary rounded-lg ml-auto" data-dismiss="modal">Cancel</button>
                                <button type="button" class=" btn btn-primary text-white rounded-lg"> Reserve </button>
                            </div>
                        </div>
@@ -241,37 +254,7 @@
                 </div>
             </div>
         </div>
-        <div id="table-start" class="row row-content">
-            <div class="card">
-                <form class="col-12 align-items-center">
-                 <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <dl class="row">
-                            <dd class="col-12 col-sm-2">Number of Guests</dd>
-                            <dd class=" col-12 col-sm-10 ">
-                                <input type="radio">1 &nbsp;
-                                <input type="radio">2 &nbsp;
-                                <input type="radio">3 &nbsp;
-                                <input type="radio">4 &nbsp;
-                                <input type="radio">5 &nbsp;
-                                <input type="radio">6
-                            </dd>
-                        </dl>
-                        <dl class="row">
-                            <dd class="col-12 col-sm-2 ">Date and Time</dd>
-                            <dd class="col-12 col-sm-10 ">
-                                <span class="col-12 col-sm-6 px-0"><input class="rounded-lg px-0 border p-2" type="text" placeholder="Date"> </span>
-                                <span class="col-12 col-sm-6 px-0 px-sm-4"><input class="rounded-lg px-0 border p-2" type="text" placeholder="Time"></span>
-                            </dd>
-                        </dl>
-                        <div class="offset-sm-2 px-1">
-                            <button type="button" class=" btn btn-primary text-white rounded-lg"> Reserve </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-        </div>
+       
     </div>
 
     <footer class="footer">
