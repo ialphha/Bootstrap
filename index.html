@@ -84,17 +84,18 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form class="col-12 align-items-center">
+                <form id="reserveModalForm" class="col-12 align-items-center">
                        <div class="card-body">
                            <dl class="row">
                                <dd class="col-12 col-sm-2">Number of Guests</dd>
-                               <dd class=" col-12 col-sm-10 ">
-                                   <input type="radio">1 &nbsp;
-                                   <input type="radio">2 &nbsp;
-                                   <input type="radio">3 &nbsp;
-                                   <input type="radio">4 &nbsp;
-                                   <input type="radio">5 &nbsp;
-                                   <input type="radio">6
+                               <dd class="form-check col-12 col-sm-10 ">
+                                   <input type="radio" name="NoOfGuest" id="1_guest" value="1_guest"checked><label for="1_guest">1 &nbsp;</label>
+                                   <input type="radio" name="NoOfGuest" id="2guest" value="2_guest"><label for="2_guest">2 &nbsp;</label>
+                                   <input type="radio" name="NoOfGuest" id="3_guest"value="3_guest"><label for="3_guest">3 &nbsp;</label>
+                                   <input type="radio" name="NoOfGuest" id="4_guest"value="4_guest"><label for="4_guest">4 &nbsp;</label>
+                                   <input type="radio" name="NoOfGuest" id="5_guest"value="5_guest"><label for="5_guest">5 &nbsp;</label>
+                                   <input type="radio" name="NoOfGuest" id ="6_guest"value="6_guest"><label for="6_guest">6</label>
+
                                </dd>
                            </dl>
                            <dl class="row">
@@ -114,12 +115,12 @@
                                <dd class="col-12 col-sm-2 ">Date and Time</dd>
                                <dd class="col-12 col-sm-10 ">
                                    <span class="col-12 col-sm-6 px-0"><input class="rounded-lg px-0 border p-2" type="text" placeholder="Date"> </span>
-                                   <span class="col-12 col-sm-6 px-0 px-sm-4"><input class="rounded-lg px-0 border p-2" type="text" placeholder="Time"></span>
+                                   <span class="col-12 col-sm-6 px-0 "><input class="rounded-lg px-0 border p-2" type="text" placeholder="Time"></span>
                                </dd>
                            </dl>
                            <div class="offset-sm-2 px-1">
                                <button type="button" class="btn btn-secondary rounded-lg ml-auto" data-dismiss="modal">Cancel</button>
-                               <button type="button" class=" btn btn-primary text-white rounded-lg"> Reserve </button>
+                               <button type="submit" class=" btn btn-primary text-white rounded-lg"> Reserve </button>
                            </div>
                        </div>
                    </form>
@@ -193,6 +194,16 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
+                        <!-- inserting buttons for play and pause using bootstrap and jQuery -->
+                        <div class="btn-group" id="carouselButton">
+                            <button class="btn btn-danger btn-sm" id="carousel-pause">
+                                <span class="fa fa-pause"></span>
+                            </button>
+                            <button class="btn btn-danger btn-sm" id="carousel-play">
+                                <span class="fa fa-play"></span>
+                            </button>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,12 +316,25 @@
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+<!-- JQuery functions to activate the button -->
+<script>
+    $(document).ready(function(){
+        $('#mycarousel').carousel({interval:2000});
+        $('#carousel-pause').click(function(){
+            $('mycarousel').carousel('pause');
+        });
+        $('#carousel-play').click(function(){
+            $('#mycarousel').carousel('cycle');
+        });
+    });
+</script>
 <!-- script tag to invoke the tooltip -->
 <!-- <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"').tooltip();
     });
 </script> -->
+
 </body>
 
 </html>
