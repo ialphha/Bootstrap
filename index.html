@@ -30,7 +30,7 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+                <a class="OpenLoginButton"><span class="fa fa-sign-in"></span> Login</a>
             </span>
         </div>
     </div>
@@ -43,7 +43,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Login </h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close LoginCancelButton">&times;</button>
             </div>
             <div class="modal-body">
                 <form>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-secondary btn-sm ml-auto LoginCancelButton" >Cancel</button>
                         <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                     </div>
                 </form>
@@ -81,7 +81,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Reserve a Table </h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="ReserveCancelButton close" >&times;</button>
             </div>
             <div class="modal-body">
                 <form id="reserveModalForm" class="col-12 align-items-center">
@@ -119,7 +119,7 @@
                                </dd>
                            </dl>
                            <div class="offset-sm-2 px-1">
-                               <button type="button" class="btn btn-secondary rounded-lg ml-auto" data-dismiss="modal">Cancel</button>
+                               <button type="button" class="btn btn-secondary rounded-lg ml-auto ReserveCancelButton" >Cancel</button>
                                <button type="submit" class=" btn btn-primary text-white rounded-lg"> Reserve </button>
                            </div>
                        </div>
@@ -141,7 +141,7 @@
 
                 <!--  inserting tooltip on the a->href button -->
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" class="btn btn-warning nav-link btn-block btn-sm" data-toggle="modal" data-target="#ReserveModal">Reserve Table</a>
+                    <a role="button" class="btn btn-warning nav-link btn-block btn-sm OpenReserveButton" >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -326,7 +326,18 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
-        
+        $('.LoginCancelButton').click(function(){
+            $('#loginModal').modal('hide');
+        });
+        $('.ReserveCancelButton').click(function(){
+            $('#ReserveModal').modal('hide');
+        });
+        $('.OpenLoginButton').click(function(){
+            $('#loginModal').modal('show');
+        });
+        $('.OpenReserveButton').click(function(){
+            $('#ReserveModal').modal('show');
+        });
     });
 </script>
 <!-- script tag to invoke the tooltip -->

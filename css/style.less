@@ -10,7 +10,7 @@
 //mixin:
 .zero-margin(@pad-up-dn: 0px,@pad-left-right:0px){
     margin: 0px auto;
-    padding: @pad-left-right@pad-up-dn;
+    padding: @pad-up-dn @pad-left-right;
 }
  
 
@@ -81,4 +81,4 @@ body{
 
 // to install less package to convert less file to css use:
 //    npm install -g less@2.7.2
-//   lessc styles.less styles.css
+//   lessc style.less style.css

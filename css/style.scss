@@ -79,6 +79,20 @@ body{
     bottom: 0px;
     z-index: 1;
 }
-// use to install sass converter
+
+.modal-header{
+    background: $background-dark;
+    color:floralwhite;
+}
+.modal-body{
+    background: $background-pale;
+}
+.ReserveCancelButton{
+    color:$background-pale;
+}
+.LoginCancelButton{
+    color:$background-pale;
+}
+// use to install sass converter:
 // npm install --save-dev node-sass@4.7.2
 //    "scss": "node-sass -o css/ css/"
